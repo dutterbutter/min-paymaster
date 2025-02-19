@@ -1,0 +1,13 @@
+[[dependencies]]
+name = "@openzeppelin-contracts"
+version = "5.2.0"
+url = "https://soldeer-revisions.s3.amazonaws.com/@openzeppelin-contracts/5_2_0_11-01-2025_09:30:20_contracts.zip"
+checksum = "6dbd0440446b2ed16ca25e9f1af08fc0c5c1e73e71fee86ae8a00daa774e3817"
+integrity = "4cb7f3777f67fdf4b7d0e2f94d2f93f198b2e5dce718b7062ac7c2c83e1183bd"
+
+[[dependencies]]
+name = "testing-contracts-soldeer"
+version = "0.0.3"
+url = "https://soldeer-revisions.s3.amazonaws.com/testing-contracts-soldeer/0_0_3_19-02-2025_21:09:40_v2-testnet-contracts.zip"
+checksum = "06b6586368691e628b937b3ecd3658e4c0b785d70163fca9346ee76f306ea79f"
+integrity = "acded9db292e4f2d588fbd9759a410187a6d7d916ad4af730cf6f8c90f99fd81"

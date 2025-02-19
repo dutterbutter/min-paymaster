@@ -1,0 +1,1 @@
+{"abi":[{"type":"function","name":"chunkPubdataToBlobs","inputs":[{"name":"_pubdata","type":"bytes","internalType":"bytes"}],"outputs":[{"name":"blobLinearHashes","type":"bytes32[]","internalType":"bytes32[]"}],"stateMutability":"pure"}],"storageLayout":{"storage":[],"types":{}},"userdoc":{},"devdoc":{},"factoryDependencies":{},"factoryDependenciesUnlinked":[],"id":3}

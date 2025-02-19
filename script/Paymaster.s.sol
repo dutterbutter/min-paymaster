@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.28;
 
 import {Script, console} from "forge-std/Script.sol";
-import { ScriptExt } from "forge-zksync-std/ScriptExt.sol";
+import {ScriptExt} from "forge-zksync-std/ScriptExt.sol";
 import {Paymaster} from "../src/Paymaster.sol";
 import {Counter} from "../src/Counter.sol";
 
@@ -20,19 +20,21 @@ contract PaymasterScript is Script, ScriptExt {
         paymaster = new Paymaster();
         (bool success, ) = address(paymaster).call{value: 1 ether}("");
         require(success, "Failed to fund Paymaster.");
+        console.log("Paymaster balance after funding:", address(paymaster).balance);
+        console.log("Initial user Balance:", address(msg.sender).balance);
 
-        // Prepare encoded input for using the Paymaster
         paymasterEncodedInput = abi.encodeWithSelector(
             bytes4(keccak256("general(bytes)")),
             bytes("")
         );
-        // Use the zkUsePaymaster cheatcode for next transaction
-        vmExt.zkUsePaymaster(paymaster, paymasterEncodedInput);
-        // Deploy the Counter contract using the Paymaster
-        counter = new Counter();
 
-        vmExt.zkUsePaymaster(paymaster, paymasterEncodedInput);
+        console.log("Paymaster balance before set:", address(paymaster).balance);
+        counter = Counter(0xb09dA1C422F9630F1BB372eFe5E7Cf3E69b05C61);
+        vmExt.zkUsePaymaster(address(paymaster), paymasterEncodedInput);
         counter.setNumber(42);
+
+        console.log("After calling setNumber(42) - Paymaster balance:", address(paymaster).balance);
+        console.log("User Balance:", address(msg.sender).balance);
 
         vm.stopBroadcast();
     }

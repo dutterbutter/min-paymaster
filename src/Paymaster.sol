@@ -47,7 +47,6 @@ contract Paymaster is IPaymaster, Ownable {
             // neither paymaster nor account are allowed to access this context variable.
             uint256 requiredETH = _transaction.gasLimit *
                 _transaction.maxFeePerGas;
-            console.log("Required ETH: %d", requiredETH);
             // The bootloader never returns any data, so it can safely be ignored here.
             (bool success, ) = payable(L2_BOOTLOADER_ADDRESS).call{
                 value: requiredETH

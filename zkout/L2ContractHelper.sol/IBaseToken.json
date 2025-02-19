@@ -1,1 +1,0 @@
-{"abi":[{"type":"function","name":"withdrawWithMessage","inputs":[{"name":"_l1Receiver","type":"address","internalType":"address"},{"name":"_additionalData","type":"bytes","internalType":"bytes"}],"outputs":[],"stateMutability":"payable"}],"storageLayout":{"storage":[],"types":{}},"userdoc":{},"devdoc":{},"factoryDependencies":{},"factoryDependenciesUnlinked":[],"id":3}

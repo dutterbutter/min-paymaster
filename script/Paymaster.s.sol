@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.28;
 
-import {Script, console} from "forge-std/Script.sol";
+import {Script, console} from "forge-std-1.9.6/Script.sol";
 import {ScriptExt} from "forge-zksync-std/ScriptExt.sol";
 import {Paymaster} from "../src/Paymaster.sol";
 import {Counter} from "../src/Counter.sol";

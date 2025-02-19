@@ -5,7 +5,7 @@ import "@testing-contracts-soldeer-0.0.3/contracts/l2-contracts/interfaces/IPaym
 import "@testing-contracts-soldeer-0.0.3/contracts/l2-contracts/interfaces/IPaymasterFlow.sol";
 import {PAYMASTER_VALIDATION_SUCCESS_MAGIC} from "@testing-contracts-soldeer-0.0.3/contracts/l2-contracts/interfaces/IPaymaster.sol";
 import {L2_BOOTLOADER_ADDRESS} from "@testing-contracts-soldeer-0.0.3/contracts/l1-contracts/common/L2ContractAddresses.sol";
-import {console} from "forge-std/Console.sol";
+import {console} from "forge-std-1.9.6/Console.sol";
 import "@openzeppelin-contracts-5.2.0/access/Ownable.sol";
 
 /// @author Matter Labs

@@ -2,7 +2,7 @@
 pragma solidity ^0.8.28;
 
 import {Script, console} from "forge-std-1.9.6/Script.sol";
-import {ScriptExt} from "forge-zksync-std/ScriptExt.sol";
+import {ScriptExt} from "forge-zksync-std-0.0.1/ScriptExt.sol";
 import {Paymaster} from "../src/Paymaster.sol";
 import {Counter} from "../src/Counter.sol";
 

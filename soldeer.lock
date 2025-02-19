@@ -13,6 +13,13 @@ checksum = "55f341818321b3f925161a72fd0dcd62e4a0a4b66785a7a932bf2bfaf96fb9d1"
 integrity = "e9ecdc364d152157431e5df5aa041ffddbe9bb1c1ad81634b1e72df9e23814e8"
 
 [[dependencies]]
+name = "forge-zksync-std"
+version = "0.0.1"
+url = "https://soldeer-revisions.s3.amazonaws.com/forge-zksync-std/0_0_1_19-02-2025_23:04:26_forge-zksync-std.zip"
+checksum = "7d281b0bbff945b8d30ec7aa5d6c11adba545795e8f1e73f370ec49d9199530c"
+integrity = "a2af8c38d49ab3c6ffdca0740b5bb6c7c77bdb8de99fc4fa7c67127acbba3164"
+
+[[dependencies]]
 name = "testing-contracts-soldeer"
 version = "0.0.3"
 url = "https://soldeer-revisions.s3.amazonaws.com/testing-contracts-soldeer/0_0_3_19-02-2025_21:09:40_v2-testnet-contracts.zip"

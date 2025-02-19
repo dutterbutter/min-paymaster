@@ -7,6 +7,7 @@ libs = ["lib", "dependencies"]
 testing-contracts-soldeer = "0.0.3"
 "@openzeppelin-contracts" = "5.2.0"
 forge-std = "1.9.6"
+forge-zksync-std = "0.0.1"
 
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

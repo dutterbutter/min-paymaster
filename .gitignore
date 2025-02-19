@@ -8,6 +8,7 @@ zkout/
 /broadcast/*/31337/
 /broadcast/*/260/
 /broadcast/**/dry-run/
+dependencies/
 
 # Docs
 docs/

@@ -1,3 +1,2 @@
 @openzeppelin-contracts-5.2.0/=dependencies/@openzeppelin-contracts-5.2.0/
 @testing-contracts-soldeer-0.0.3/=dependencies/testing-contracts-soldeer-0.0.3/
-forge-zksync-std/=dependencies/forge-zksync-std/src/

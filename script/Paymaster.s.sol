@@ -29,9 +29,12 @@ contract PaymasterScript is Script, ScriptExt {
         );
 
         console.log("Paymaster balance before set:", address(paymaster).balance);
-        counter = Counter(0xb09dA1C422F9630F1BB372eFe5E7Cf3E69b05C61);
+        counter = new Counter();
+        console.log("address(counter):", address(counter));
+
         vmExt.zkUsePaymaster(address(paymaster), paymasterEncodedInput);
         counter.setNumber(42);
+        vm.roll(1);
 
         console.log("After calling setNumber(42) - Paymaster balance:", address(paymaster).balance);
         console.log("User Balance:", address(msg.sender).balance);

@@ -36,7 +36,7 @@ jobs:
 
       - name: Run Forge script test
         run: |
-          forge script script/Counter.s.sol --zksync --private-key 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba --rpc-url http://127.0.0.1:8011
+          forge script script/Counter.s.sol --zksync --broadcast --private-key 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba --rpc-url http://127.0.0.1:8011
 
       - name: Show Forge version
         run: |

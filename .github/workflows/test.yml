@@ -21,7 +21,7 @@ jobs:
           submodules: recursive
 
       - name: Install Foundry
-        uses: dutterbutter/foundry-zksync-toolchain@v1
+        uses: dutterbutter/foundry-zksync-toolchain@db/fix-to-use-stable-latest
 
       - name: Install deps
         run: forge soldeer install

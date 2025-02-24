@@ -18,15 +18,12 @@ contract PaymasterScript is Script, ScriptExt {
         vm.startBroadcast();
 
         paymaster = new Paymaster();
-        (bool success, ) = address(paymaster).call{value: 1 ether}("");
+        (bool success,) = address(paymaster).call{value: 1 ether}("");
         require(success, "Failed to fund Paymaster.");
         console.log("Paymaster balance after funding:", address(paymaster).balance);
         console.log("Initial user Balance:", address(msg.sender).balance);
 
-        paymasterEncodedInput = abi.encodeWithSelector(
-            bytes4(keccak256("general(bytes)")),
-            bytes("")
-        );
+        paymasterEncodedInput = abi.encodeWithSelector(bytes4(keccak256("general(bytes)")), bytes(""));
 
         console.log("Paymaster balance before set:", address(paymaster).balance);
         counter = new Counter();

@@ -21,7 +21,24 @@ jobs:
           submodules: recursive
 
       - name: Install Foundry
-        uses: foundry-rs/foundry-toolchain@v1
+        uses: dutterbutter/foundry-zksync-toolchain@db/fix-to-use-stable-latest
+        with:
+          version: v0.0.7
+
+      - name: Install deps
+        run: forge soldeer install
+
+      - name: Run anvil-zksync
+        uses: dutterbutter/anvil-zksync-action@v1.1.0
+        with:
+          mode: run 
+          logFilePath: anvil_zksync.log
+          target: x86_64-unknown-linux-gnu
+          releaseTag: latest
+
+      - name: Run Forge script test
+        run: |
+          forge script script/Counter.s.sol --zksync --broadcast --private-key 0x8b3a350cf5c34c9194ca85829a2df0ec3153be0318b5e2d3348e872092edffba --rpc-url http://127.0.0.1:8011
 
       - name: Show Forge version
         run: |
@@ -34,10 +51,12 @@ jobs:
 
       - name: Run Forge build
         run: |
-          forge build --sizes
+          forge build --sizes --zksync
         id: build
 
       - name: Run Forge tests
         run: |
-          forge test -vvv
+          forge test -vvv --zksync
         id: test
+
+

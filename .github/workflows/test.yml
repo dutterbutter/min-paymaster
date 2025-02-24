@@ -22,6 +22,8 @@ jobs:
 
       - name: Install Foundry
         uses: dutterbutter/foundry-zksync-toolchain@db/fix-to-use-stable-latest
+        with:
+          version: v0.0.7
 
       - name: Install deps
         run: forge soldeer install
